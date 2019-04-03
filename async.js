@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    function _async(generator) {
-        let iterator = generator();
+    function _async(generator, ...args) {
+        let iterator = generator(...args);
         return function _await(yieldValue) {
             let next = iterator.next(yieldValue);
 
